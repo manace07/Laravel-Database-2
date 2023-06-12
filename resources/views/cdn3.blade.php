@@ -1,4 +1,4 @@
-<script>
+<script src="{{ asset('assets/css/a_script.js') }}">
 const showPassword = document.querySelector("#show-password");
 const passwordField = document.querySelector("password")
 

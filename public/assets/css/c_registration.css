@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* display: flex; */
+    background: #451528;
+}
+
+.box-area{
+    width: 80%;
+}
+
+.left-box {
+    background: #fff;
+    border-radius: 0 5pc 5pc 0;
+}
+
+.right-box {
+    background: #D3D3D3;
+    border-radius: 5pc 0 0 5pc;
+    padding: 40px;
+}
+.container-fluid h5, p{
+    color: #451528;
+}
+
+.container-fluid h5{
+    font-weight: 700;
+    color: #451528;
+}
+
+.container-fluid form .form-group {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.container-fluid form .form-group span{
+    color: #ff0000;
+}
+
+.container-fluid form .form-group label{
+    color: #D3D3D3;
+}
+
+.container-fluid form input[type="submit"]{
+    /* font-size: 20px; */
+    font-weight: 500;
+    height: 40px;
+    margin-top: 15px;
+    width: 98%;
+    color: #fff;
+    background: #451528;
+    border-radius: 6px;
+}
+.container-fluid form input[type="submit"]:hover {
+    background: #742B48;
+}
+
+.fa-eye{
+    position: absolute;
+    top: 40%;
+    right: 4%;
+    cursor: pointer;
+    color: #D3D3D3;
+}
+
+.container-fluid form .reg {
+    text-align: center;
+    color: #451528;
+    cursor: pointer;
+    font-weight: 500;
+    /* font-size: 20px; */
+    width: 98%;
+    margin-left: 4px;
+    height: 40px;
+    padding-top: 8px;
+} 
+.container-fluid form .reg:hover {
+    color: #fff;
+    background: #451528; 
+    border-radius: 6px;
+}

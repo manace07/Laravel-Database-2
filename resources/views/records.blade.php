@@ -12,7 +12,7 @@
 
 <div class="d-grid gap-2 col-6 mx-auto black">
     <div class="row my-2 justify-content-center">
-        <a href=# class="btn btn-secondary" style="opacity: 50%;"> Suppliers </a>
+        <a href="{{ route('supplier')}}"class="btn btn-secondary" style="opacity: 50%;"> Suppliers </a>
     </div>
     <div class="row my-2 justify-content-center">
         <a href=# class="btn btn-secondary" style="opacity: 50%;"> Expenses </a>

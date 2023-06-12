@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+
 use Kreait\Firebase\Factory;
+use Kreait\Firebase\Auth\SignIn\FailedToSignIn;
 use Kreait\Firebase\Auth;
 use Kreait\Firebase\Exception\FirebaseException;
 use Illuminate\Http\Request;
@@ -25,6 +27,14 @@ class User_Controller extends Controller
     {
         return view('registration');
     }
+
+    public function showLoginForm()
+    {
+        return view('login');
+    }
+
+
+
 
     public function validateRegistration(Request $request)
     {
@@ -59,12 +69,38 @@ class User_Controller extends Controller
             ];
             $this->firebaseAuth->updateUser($user->uid, $userProperties);
 
-
-
             return redirect('/')->with('success', 'Registration Successful!');
         } catch (FirebaseException $e) {
             // Handle any errors that occur during the registration process
             return redirect()->back()->withInput()->withErrors([$e->getMessage()]);
+        }
+    }
+
+    public function validateLogin(Request $request)
+    {
+        $credentials = $request->validate([
+            'email' => 'required|email',
+            'password' => 'required',
+        ]);
+
+        $email = $credentials['email'];
+        $password = $credentials['password'];
+
+        try {
+            // Sign in the user with email and password
+            $signInResult = $this->firebaseAuth->signInWithEmailAndPassword($email, $password);
+
+            // Get the user from the sign-in result
+            $user = $signInResult->data();
+
+            // Perform login actions, e.g., store user ID in session or redirect to dashboard
+            return redirect()->route('dashboard');
+        } catch (FailedToSignIn $e) {
+            // Handle failed sign-in attempts, e.g., invalid credentials
+            return redirect()->back()->withErrors(['credentials' => 'Invalid credentials']);
+        } catch (FirebaseException $e) {
+            // Handle any other errors that occur during the login process
+            return redirect()->back()->withErrors([$e->getMessage()]);
         }
     }
 }

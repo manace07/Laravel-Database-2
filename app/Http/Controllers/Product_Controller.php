@@ -8,6 +8,7 @@ use Kreait\Laravel\Firebase\Facades\Firebase;
 
 class Product_Controller extends Controller
 {
+    
     public function create()
     {
         return view('add_product');

@@ -1,0 +1,12 @@
+.nav ul li a {
+    color: #451528;
+    font-weight: 700;
+    margin-left: 5px;
+    float: left;
+    
+}
+.nav ul li a:hover{
+        color: #451528;
+        opacity: 0.8;
+        cursor: pointer;
+}

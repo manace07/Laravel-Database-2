@@ -1,11 +1,14 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\http\Controllers\TodoListController;
 use App\http\Controllers\Main_Controller;
 use App\http\Controllers\Product_Controller;
 use App\http\Controllers\User_Controller;
 use App\http\Controllers\Expenses_Controller;
+use App\http\Controllers\Supplier_Controller;
+
 
 
 
@@ -124,13 +127,27 @@ Route::group(['middleware' => ['web']], function () {
 
     Route::post('/registration', [User_Controller::class, 'validateRegistration'])->name('registration.submit');
 
-    Route::get('/welcome', [User_Controller::class, 'index'])->name('login');
-
-    Route::get('/logout', [User_Controller::class, 'logout'])->name('logout');
-
-    Route::post('/validate_login', [User_Controller::class, 'validate_login'])->name('welcome.validate_login');
+    Route::get('/logout', [Main_Controller::class, 'logout'])->name('logout');
 
     Route::get('/products', [User_Controller::class, 'products'])->name('products');
+
+    Route::get('/login', [User_Controller::class, 'showLoginForm'])->name('login');
+
+    Route::post('/login', [User_Controller::class, 'validateLogin'])->name('login.validate');
+
+    // ----------
+
+    // SUPPLIER ROUTES
+
+    Route::get('/Records/Suppliers', [Main_Controller::class, 'supplier'])->name('supplier');
+
+    Route::get('/Records/Suppliers/Add_supplier', [Main_Controller::class, 'addSupplier'])->name('addsupplier');
+
+    Route::post('/Records/Suppliers/Add_supplier', [Main_Controller::class, 'store'])->name('insert.supplier');
+
+    Route::delete('/DeleteSupplier/{id}', [Main_Controller::class, 'delete_supplier'])->name('delete_supplier');
+
+
 });
 
 

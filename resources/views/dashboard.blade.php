@@ -1,6 +1,8 @@
 @include('header')
 @include('cdn')
 
+<link rel="stylesheet" href="{{ asset('assets/css/a_main.css') }}">
+
 <html>
 <body>
 
