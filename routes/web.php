@@ -7,7 +7,7 @@ use App\http\Controllers\Main_Controller;
 use App\http\Controllers\Product_Controller;
 use App\http\Controllers\User_Controller;
 use App\http\Controllers\Expenses_Controller;
-use App\http\Controllers\Supplier_Controller;
+use App\Http\Controllers\FirebaseController;
 
 
 
@@ -146,6 +146,14 @@ Route::group(['middleware' => ['web']], function () {
     Route::post('/Records/Suppliers/Add_supplier', [Main_Controller::class, 'store'])->name('insert.supplier');
 
     Route::delete('/DeleteSupplier/{id}', [Main_Controller::class, 'delete_supplier'])->name('delete_supplier');
+
+
+    // APRIORI TESTING
+
+    
+
+    Route::get('/export-csv', [FirebaseController::class, 'exportCsv'])->name('export-csv');
+
 
 
 });

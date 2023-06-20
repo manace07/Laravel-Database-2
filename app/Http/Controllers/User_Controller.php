@@ -94,7 +94,7 @@ class User_Controller extends Controller
             $user = $signInResult->data();
 
             // Perform login actions, e.g., store user ID in session or redirect to dashboard
-            return redirect()->route('dashboard');
+            return redirect()->route('dashboard');  
         } catch (FailedToSignIn $e) {
             // Handle failed sign-in attempts, e.g., invalid credentials
             return redirect()->back()->withErrors(['credentials' => 'Invalid credentials']);

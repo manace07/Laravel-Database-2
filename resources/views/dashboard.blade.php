@@ -20,6 +20,7 @@
       <div class="container-fluid px-3">
         <div class="row">
           <div class="row g-2 justify-content-center">
+          <a href="{{ route('export-csv') }}">Export CSV</a>
 
           <div class="row my-2 justify-content-center">
             <div class="col-md-5 mb-2">
