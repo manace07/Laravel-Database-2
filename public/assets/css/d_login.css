@@ -76,3 +76,14 @@ body {
     background: #451528; 
     border-radius: 6px;
 }
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f8f9fa;
+    border-top: 1px solid #dee2e6;
+    padding: 10px;
+    text-align: center;
+  }

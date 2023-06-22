@@ -120,7 +120,6 @@ class Main_Controller extends Controller
     {
         return view('salesreport');
     }
-
     
 
     public function store(Request $request)
@@ -160,5 +159,6 @@ class Main_Controller extends Controller
 
         return redirect()->route('supplier')->with('success', 'Supplier Info Deleted Successfully!');
     }
+
 
 }

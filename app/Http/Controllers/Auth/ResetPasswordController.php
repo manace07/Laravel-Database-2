@@ -2,29 +2,39 @@
 
 namespace App\Http\Controllers\Auth;
 
+use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Providers\RouteServiceProvider;
-use Illuminate\Foundation\Auth\ResetsPasswords;
+use Illuminate\Support\Facades\Password;
 
 class ResetPasswordController extends Controller
 {
-    /*
-    |--------------------------------------------------------------------------
-    | Password Reset Controller
-    |--------------------------------------------------------------------------
-    |
-    | This controller is responsible for handling password reset requests
-    | and uses a simple trait to include this behavior. You're free to
-    | explore this trait and override any methods you wish to tweak.
-    |
-    */
+    public function showResetForm(Request $request)
+    {
+        return view('auth.passwords.reset', ['token' => $request->token]);
+    }
 
-    use ResetsPasswords;
+    public function reset(Request $request)
+    {
+        $request->validate([
+            'email' => 'required|email',
+            'password' => 'required|confirmed|min:8',
+        ]);
 
-    /**
-     * Where to redirect users after resetting their password.
-     *
-     * @var string
-     */
-    protected $redirectTo = RouteServiceProvider::HOME;
+        $credentials = $request->only('email', 'password', 'password_confirmation', 'token');
+
+        $status = Password::reset($credentials, function ($user, $password) {
+            $user->forceFill([
+                'password' => bcrypt($password),
+                'remember_token' => \Illuminate\Support\Str::random(60),
+            ])->save();
+        });
+
+        if ($status === Password::PASSWORD_RESET) {
+            return redirect()->route('login')->with('success', 'Your password has been reset successfully.');
+        } else {
+            return redirect()->back()->withErrors(['email' => trans($status)]);
+        }
+    }
 }
+
+?>

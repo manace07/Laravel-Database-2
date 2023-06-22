@@ -8,11 +8,10 @@
 /* body styles */
 
 body {
-
-  padding-left: 15%; 
+padding-left: 15%; 
   /* add top padding to the body to avoid overlapping */
-
 }
+
 @media (min-width: 100px) and (max-width: 350px) { 
   body {
       padding-left: 23%;
@@ -265,4 +264,30 @@ body {
  padding-right: 8px;
  font-weight: 600;
  color: #451528;
+}
+
+.card tr td a{
+  background: #451528;
+  color:#fff;
+  /* color: #451528; */
+}
+.card tr td a:hover{
+  background: #451528;
+  color:#fff;
+  opacity: 0.8;
+  /* color: #451528; */
+}
+
+.container-fluid a i {
+  text-decoration: none;
+  background: #451528;
+  color: #fff;
+  border-radius: 50%;
+  opacity: 0.8;
+}
+
+.container-fluid a i:hover {
+  text-decoration: none;
+  color: #fff;
+  opacity: 0.7;
 }

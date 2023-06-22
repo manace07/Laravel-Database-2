@@ -36,10 +36,10 @@
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('logout') }}"><i class="fs-5 fa fa-door-open"></i><span class="ms-2 d-none d-sm-inline">Logout</span></a>
             </li>
+            <li class="nav-item mt-auto text-wrap">@include('footer')</li>
         </ul>
         </div>
     </div>
 
     
-
 </body>

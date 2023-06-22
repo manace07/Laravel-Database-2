@@ -41,7 +41,7 @@
             </div>
 
             <div class="form-group text-end">
-                <a class="fs-6" href="#" target=" _blank" rel="noopener noreferrer">Forgot Password?</a>
+                <a class="fs-6" href="{{ route('password.request') }}" target=" _blank" rel="noopener noreferrer">Forgot Password?</a>
             </div>
 
             <div class="form-group text-center"><input type="submit" value="LOGIN"></div>

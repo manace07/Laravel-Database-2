@@ -20,8 +20,6 @@
       <div class="container-fluid px-3">
         <div class="row">
           <div class="row g-2 justify-content-center">
-          <a href="{{ route('export-csv') }}">Export CSV</a>
-
           <div class="row my-2 justify-content-center">
             <div class="col-md-5 mb-2">
               <div
@@ -31,8 +29,9 @@
                   <h3 class="fs-2">720</h3>
                   <p class="fs-5">Purchased</p>
                 </div>
+                <a href="{{ route('expensePage') }}">
                 <i
-                  class="fa-duotone fa fa-cart-shopping fs-1 border rounded-5 p-3"></i>
+                  class="fa-duotone fa fa-cart-shopping fs-1 border rounded-5 p-3"></i></a>
               </div>
             </div>
             
@@ -44,8 +43,9 @@
                   <h3 class="fs-2">720</h3>
                   <p class="fs-5">Inventory</p>
                 </div>
+                <a href="{{ route('productPage') }}">
                 <i
-                  class="fa-solid fa fa-boxes-packing fs-1 border rounded-5 p-3"></i>
+                  class="fa-solid fa fa-boxes-packing fs-1 border rounded-5 p-3"></i></a>
               </div>
             </div>
           </div>
@@ -59,8 +59,9 @@
                   <h3 class="fs-2">720</h3>
                   <p class="fs-5">Sales Report</p>
                 </div>
+                <a href="{{ route('salesreport') }}">
                 <i
-                  class="fa-solid fa fa-file-invoice-dollar fs-1 border rounded-5 p-3"></i>
+                  class="fa-solid fa fa-file-invoice-dollar fs-1 border rounded-5 p-3"></i></a>
               </div>
             </div>
 
@@ -72,8 +73,9 @@
                   <h3 class="fs-2">720</h3>
                   <p class="fs-5">Records</p>
                 </div>
+                <a href="{{ route('records') }}">
                 <i
-                  class="fa-sharp fa-solid fa fa-clipboard fs-1 border rounded-5 p-3"></i>
+                  class="fa-sharp fa-solid fa fa-clipboard fs-1 border rounded-5 p-3"></i></a>
               </div>
             </div>
           </div>
@@ -81,6 +83,8 @@
       </div>
     </div>
 
+
 </body>
-@include('footer')
 </html>
+
+    </div>

@@ -8,9 +8,11 @@ use App\http\Controllers\Product_Controller;
 use App\http\Controllers\User_Controller;
 use App\http\Controllers\Expenses_Controller;
 use App\Http\Controllers\FirebaseController;
-
-
-
+use App\Http\Controllers\GrossProfit_Controller;
+use App\Http\Controllers\ForgotPasswordController;
+use App\Http\Controllers\ResetPasswordController;
+use App\Http\Controllers\Sun_Apriori;
+//remove 2 password controllers if not working
 
 /*
 |--------------------------------------------------------------------------
@@ -49,9 +51,21 @@ Route::get('/Inventory',[Main_Controller::class, 'inventory'])
 Route::get('/Sales Report',[Main_Controller::class, 'salesreport'])
 ->name('salesreport');
 
+// -----------
+
+Route::get('/reset/{token}', [ResetPasswordController::class, 'showResetForm'])->name('reset');
+Route::post('/reset', [ResetPasswordController::class, 'reset'])->name('update');
+
+Route::get('/reset', [ForgotPasswordController::class, 'showLinkRequestForm'])->name('request');
+Route::post('/email', [ForgotPasswordController::class, 'sendResetLinkEmail'])->name('email');
 
 // -----------
 
+// gross profit routes
+
+Route::get('/Records/GrossProfit', [GrossProfit_Controller::class, 'grossprofit'])->name('grossprofit');
+
+// -----------
 
 // product routes 
 
@@ -149,12 +163,34 @@ Route::group(['middleware' => ['web']], function () {
 
 
     // APRIORI TESTING
-
     
+    //Sunday
+    Route::get('/sun-morning', [FirebaseController::class, 'sun_m_CSV'])->name('sun-morning');
+    Route::get('/sun-afternoon', [FirebaseController::class, 'sun_a_CSV'])->name('sun-afternoon');
+    Route::get('/sun-night', [FirebaseController::class, 'sun_n_CSV'])->name('sun-night');
+    //Monday
+    Route::get('/mon-morning', [FirebaseController::class, 'mon_m_CSV'])->name('mon-morning');
+    Route::get('/mon-afternoon', [FirebaseController::class, 'mon_a_CSV'])->name('mon-afternoon');
+    Route::get('/mon-night', [FirebaseController::class, 'mon_n_CSV'])->name('mon-night');
+    //Tuesday
+    Route::get('/tues-morning', [FirebaseController::class, 'tues_m_CSV'])->name('tues-morning');
+    Route::get('/tues-afternoon', [FirebaseController::class, 'tues_a_CSV'])->name('tues-afternoon');
+    Route::get('/tues-night', [FirebaseController::class, 'tues_n_CSV'])->name('tues-night');
+    //Wednesday
+    Route::get('/wed-morning', [FirebaseController::class, 'wed_m_CSV'])->name('wed-morning');
+    Route::get('/wed-afternoon', [FirebaseController::class, 'wed_a_CSV'])->name('wed-afternoon');
+    Route::get('/wed-night', [FirebaseController::class, 'wed_n_CSV'])->name('wed-night');
+    //Thursday
+    Route::get('/thurs-morning', [FirebaseController::class, 'thurs_m_CSV'])->name('thurs-morning');
+    Route::get('/thurs-afternoon', [FirebaseController::class, 'thurs_a_CSV'])->name('thurs-afternoon');
+    Route::get('/thurs-night', [FirebaseController::class, 'thurs_n_CSV'])->name('thurs-night');
+    //Friday
+    Route::get('/fri-morning', [FirebaseController::class, 'fri_m_CSV'])->name('fri-morning');
+    Route::get('/fri-afternoon', [FirebaseController::class, 'fri_a_CSV'])->name('fri-afternoon');
+    Route::get('/fri-night', [FirebaseController::class, 'fri_n_CSV'])->name('fri-night');
 
-    Route::get('/export-csv', [FirebaseController::class, 'exportCsv'])->name('export-csv');
-
-
+    //Forecasting
+    Route::get('/sun-apriori', [Sun_Apriori::class, 'sunApriori'])->name('sun-apriori');
 
 });
 

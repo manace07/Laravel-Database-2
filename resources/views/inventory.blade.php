@@ -245,5 +245,4 @@ a:hover{
       </div>
     </div>
 </body>
-@include('footer')
 </html>

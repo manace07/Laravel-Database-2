@@ -153,6 +153,11 @@ a:hover{
    color: #451528;
 }
 
+.contaianer-2 a .btn-f {
+   background: #451528;
+   color: #451528;
+}
+
 
  /***** INVENTORY & PURCHASED *****/
 
@@ -210,3 +215,4 @@ a:hover{
    color: #451528;
    opacity: 0.4;
 }
+
