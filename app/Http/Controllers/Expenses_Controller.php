@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\products_table;
 use Kreait\Laravel\Firebase\Facades\Firebase;
 
+
 class Expenses_Controller extends Controller
 {
     public function create()
@@ -35,13 +36,14 @@ class Expenses_Controller extends Controller
         $reference = $database->getReference('expenses');
         $newExpenseRef = $reference->push($newExpense);
     
-        return redirect()->route('expensePage')->with('success', 'Detail Added Successfully!');
+        return redirect()->route('expensePage')->with('success', 'Expense Added Successfully!');
     }
     
 
     public function show($id)
     {
-        $reference = $this->database->getReference('expenses/' . $id);
+        $database = Firebase::database();
+        $reference = $database->getReference('expenses/' . $id);
         $data = $reference->getValue();
 
         // Debug statement
@@ -51,8 +53,16 @@ class Expenses_Controller extends Controller
 
     public function edit($id)
     {
-        $reference = $this->database->getReference('expenses');
-        $snapshot = $reference->getSnapshot();
+        $database = Firebase::database();
+        $reference = $database->getReference('expenses/');
+        try {
+            $snapshot = $reference->getSnapshot();
+            // Process the snapshot data here
+        } catch (Exception $e) {
+            echo "An error occurred: " . $e->getMessage();
+            // Handle or log the error appropriately
+        }
+        
 
         $data = null;
 
@@ -77,7 +87,8 @@ class Expenses_Controller extends Controller
             'purchase_date' => 'required',
         ]);
 
-        $reference = $this->database->getReference('expenses/' . $id);
+        $database = Firebase::database();
+        $reference = $database->getReference('expenses/' . $id);
 
         $expense = [
             'product_expiration' => $request->product_expiration,
@@ -95,7 +106,7 @@ class Expenses_Controller extends Controller
     public function destroy($id)
     {
         $database = Firebase::database();
-        $reference = $database->getReference('products/' . $id);
+        $reference = $database->getReference('expenses/' . $id);
         $reference->remove();
 
         return redirect()->route('productPage')->with('success', 'Product Deleted Successfully!');

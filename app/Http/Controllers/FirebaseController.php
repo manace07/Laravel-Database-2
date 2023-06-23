@@ -44,7 +44,7 @@ class FirebaseController extends Controller
         }
 
         // Generate the CSV file
-        $csvPath = storage_path('app/Sunday.csv');
+        $csvPath = public_path('Sunday.csv');
         $csv = Writer::createFromPath($csvPath, 'w+');
         $csv->insertAll($rows); // Insert data rows
 
@@ -84,7 +84,7 @@ class FirebaseController extends Controller
         }
 
         // Generate the CSV file
-        $csvPath = storage_path('app/Sunday.csv');
+        $csvPath = public_path('Sunday.csv');
         $csv = Writer::createFromPath($csvPath, 'w+');
         $csv->insertAll($rows); // Insert data rows
 
@@ -124,7 +124,7 @@ class FirebaseController extends Controller
         }
 
         // Generate the CSV file
-        $csvPath = storage_path('app/Sunday.csv');
+        $csvPath = public_path('Sunday.csv');
         $csv = Writer::createFromPath($csvPath, 'w+');
         $csv->insertAll($rows); // Insert data rows
 
@@ -165,7 +165,7 @@ class FirebaseController extends Controller
         }
 
         // Generate the CSV file
-        $csvPath = storage_path('app/Monday.csv');
+        $csvPath = public_path('Monday.csv');
         $csv = Writer::createFromPath($csvPath, 'w+');
         $csv->insertAll($rows); // Insert data rows
 
@@ -205,7 +205,7 @@ class FirebaseController extends Controller
         }
 
         // Generate the CSV file
-        $csvPath = storage_path('app/Monday.csv');
+        $csvPath = public_path('Monday.csv');
         $csv = Writer::createFromPath($csvPath, 'w+');
         $csv->insertAll($rows); // Insert data rows
 
@@ -245,7 +245,7 @@ class FirebaseController extends Controller
         }
 
         // Generate the CSV file
-        $csvPath = storage_path('app/Monday.csv');
+        $csvPath = public_path('Monday.csv');
         $csv = Writer::createFromPath($csvPath, 'w+');
         $csv->insertAll($rows); // Insert data rows
 
@@ -286,7 +286,7 @@ class FirebaseController extends Controller
         }
 
         // Generate the CSV file
-        $csvPath = storage_path('app/Tuesday.csv');
+        $csvPath = public_path('Tuesday.csv');
         $csv = Writer::createFromPath($csvPath, 'w+');
         $csv->insertAll($rows); // Insert data rows
 
@@ -326,7 +326,7 @@ class FirebaseController extends Controller
         }
 
         // Generate the CSV file
-        $csvPath = storage_path('app/Tuesday.csv');
+        $csvPath = public_path('Tuesday.csv');
         $csv = Writer::createFromPath($csvPath, 'w+');
         $csv->insertAll($rows); // Insert data rows
 
@@ -366,7 +366,7 @@ class FirebaseController extends Controller
         }
 
         // Generate the CSV file
-        $csvPath = storage_path('app/Tuesday.csv');
+        $csvPath = public_path('Tuesday.csv');
         $csv = Writer::createFromPath($csvPath, 'w+');
         $csv->insertAll($rows); // Insert data rows
 
@@ -407,7 +407,7 @@ class FirebaseController extends Controller
         }
 
         // Generate the CSV file
-        $csvPath = storage_path('app/Wednesday.csv');
+        $csvPath = public_path('Wednesday.csv');
         $csv = Writer::createFromPath($csvPath, 'w+');
         $csv->insertAll($rows); // Insert data rows
 
@@ -447,7 +447,7 @@ class FirebaseController extends Controller
         }
 
         // Generate the CSV file
-        $csvPath = storage_path('app/Wednesday.csv');
+        $csvPath = public_path('Wednesday.csv');
         $csv = Writer::createFromPath($csvPath, 'w+');
         $csv->insertAll($rows); // Insert data rows
 
@@ -487,7 +487,7 @@ class FirebaseController extends Controller
         }
 
         // Generate the CSV file
-        $csvPath = storage_path('app/Wednesday.csv');
+        $csvPath = public_path('Wednesday.csv');
         $csv = Writer::createFromPath($csvPath, 'w+');
         $csv->insertAll($rows); // Insert data rows
 
@@ -528,7 +528,7 @@ class FirebaseController extends Controller
         }
 
         // Generate the CSV file
-        $csvPath = storage_path('app/Thursday.csv');
+        $csvPath = public_path('Thursday.csv');
         $csv = Writer::createFromPath($csvPath, 'w+');
         $csv->insertAll($rows); // Insert data rows
 
@@ -568,7 +568,7 @@ class FirebaseController extends Controller
         }
 
         // Generate the CSV file
-        $csvPath = storage_path('app/Thursday.csv');
+        $csvPath = public_path('Thursday.csv');
         $csv = Writer::createFromPath($csvPath, 'w+');
         $csv->insertAll($rows); // Insert data rows
 
@@ -608,7 +608,7 @@ class FirebaseController extends Controller
         }
 
         // Generate the CSV file
-        $csvPath = storage_path('app/Thursday.csv');
+        $csvPath = public_path('Thursday.csv');
         $csv = Writer::createFromPath($csvPath, 'w+');
         $csv->insertAll($rows); // Insert data rows
 
@@ -649,7 +649,7 @@ class FirebaseController extends Controller
         }
 
         // Generate the CSV file
-        $csvPath = storage_path('app/Friday.csv');
+        $csvPath = public_path('Friday.csv');
         $csv = Writer::createFromPath($csvPath, 'w+');
         $csv->insertAll($rows); // Insert data rows
 
@@ -689,7 +689,7 @@ class FirebaseController extends Controller
         }
 
         // Generate the CSV file
-        $csvPath = storage_path('app/Friday.csv');
+        $csvPath = public_path('Friday.csv');
         $csv = Writer::createFromPath($csvPath, 'w+');
         $csv->insertAll($rows); // Insert data rows
 
@@ -729,7 +729,7 @@ class FirebaseController extends Controller
         }
 
         // Generate the CSV file
-        $csvPath = storage_path('app/Friday.csv');
+        $csvPath = public_path('Friday.csv');
         $csv = Writer::createFromPath($csvPath, 'w+');
         $csv->insertAll($rows); // Insert data rows
 

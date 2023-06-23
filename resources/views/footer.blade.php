@@ -1,12 +1,12 @@
-<!-- <footer class="py-5 px-2">
+<footer class="py-5 px-2">
     <p class="mt-auto text-sm">&copy; <span class="d-none d-sm-inline"> 2023 DEVBUG </span></p>
-</footer> -->
+</footer>
 
 
-<div class="wrapper fixed-bottom py-4 bg-black color-white">
-        <div class="content">
+<!-- <div class="wrapper fixed-bottom py-4 bg-black color-white">
+        <div class="content"> -->
             <!-- Your content here -->
-        </div>
+        <!-- </div>
         <footer class="footer">
             <div class="container">
                 <div class="row justify-content-between">
@@ -45,6 +45,6 @@
                 </div>
             </div>
         </footer>
-    </div>
+    </div> -->
 </body>
 </html>

@@ -1,6 +1,6 @@
 import pandas as pd
 
-file_Path = 'Sunday.csv'
+file_Path = 'Wednesday.csv'
 data = []
 
 with open(file_Path, 'r') as file:

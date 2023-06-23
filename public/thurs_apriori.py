@@ -1,6 +1,6 @@
 import pandas as pd
 
-file_Path = 'Sunday.csv'
+file_Path = 'Thursday.csv'
 data = []
 
 with open(file_Path, 'r') as file:
@@ -70,21 +70,21 @@ format_data_bool = format_data.astype(bool)
 
 # min_support is the limit of support value
 # frequent_itemsets has frequency of each item and its combination 
-frequent_itemsets = apriori(format_data_bool, min_support=0.3, use_colnames=True)
+frequent_itemsets = apriori(format_data_bool, min_support=0.8, use_colnames=True)
 
-# Filter frequent_itemsets for items with support >= 0.3
-filtered_itemsets = frequent_itemsets[frequent_itemsets['support'] >= 0.3]
+# Filter frequent_itemsets for items with support >= 0.8
+filtered_itemsets = frequent_itemsets[frequent_itemsets['support'] >= 0.8]
 
 # Check if filtered_itemsets is empty
 if filtered_itemsets.empty:
-    print("No frequent itemsets found with support >= 0.3.")
+    print("No frequent itemsets found with support >= 0.8.")
 else:
     # Create a bar graph
     plt.figure(figsize=(12, 6))
     plt.bar(filtered_itemsets['itemsets'].apply(lambda x: ', '.join(list(x))), filtered_itemsets['support'])
     plt.xlabel('Itemsets')
     plt.ylabel('Support')
-    plt.title('Itemsets with Support >= 0.3')
+    plt.title('Itemsets with Support >= 0.8')
     plt.xticks(rotation=90)
     plt.tight_layout()
     plt.savefig('apriori.png')

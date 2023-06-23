@@ -11,7 +11,7 @@ use App\Http\Controllers\FirebaseController;
 use App\Http\Controllers\GrossProfit_Controller;
 use App\Http\Controllers\ForgotPasswordController;
 use App\Http\Controllers\ResetPasswordController;
-use App\Http\Controllers\Sun_Apriori;
+use App\Http\Controllers\Apriori_Controller;
 //remove 2 password controllers if not working
 
 /*
@@ -190,8 +190,12 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/fri-night', [FirebaseController::class, 'fri_n_CSV'])->name('fri-night');
 
     //Forecasting
-    Route::get('/sun-apriori', [Sun_Apriori::class, 'sunApriori'])->name('sun-apriori');
-
+    Route::get('/sun-apriori', [Apriori_Controller::class, 'sunApriori'])->name('sun-apriori');
+    Route::get('/mon-apriori', [Apriori_Controller::class, 'monApriori'])->name('mon-apriori');
+    Route::get('/tues-apriori', [Apriori_Controller::class, 'tuesApriori'])->name('tues-apriori');
+    Route::get('/wed-apriori', [Apriori_Controller::class, 'wedApriori'])->name('wed-apriori');
+    Route::get('/thurs-apriori', [Apriori_Controller::class, 'thursApriori'])->name('thurs-apriori');
+    Route::get('/fri-apriori', [Apriori_Controller::class, 'friApriori'])->name('fri-apriori');
 });
 
 

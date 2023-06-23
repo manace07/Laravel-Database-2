@@ -1,10 +1,4 @@
-Fishball,Kwek-kwek,Hotdog,Siomai,Dynamite,Fries,ChickenBalls,CheeseStick
-Fishball,Kwek-kwek
-Siomai,Fishball,Penoy,Kwek-kwek
-Hotdog,Siomai,Dynamite,ChickenBalls
-Hotdog,Siomai,Dynamite,Fries,ChickenBalls,CheeseStick
-Siomai,Penoy
+Hotdog,Fishball,Kwek-kwek
 Hotdog
-ChickenBalls
-Fries,CheeseStick
-ChickenBalls,Kikiam
+Hotdog
+22

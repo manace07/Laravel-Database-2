@@ -47,72 +47,93 @@
                         <div class="card ">
                             <div class="card-header">
                                 <div class="row">
-                                    <div class="col col-md-6"><b>Popular Item Forecasting</b></div>
+                                    <div class="col col-md-10"><b>Popular Item Forecasting</b></div>
                                 </div>
                             </div>
                             <div class="card-body">
-                                <table class="table table-bordered">
-                                    <tr>
-                                        <th class="col-2">Day of the Week</th>
-                                        <th class="col-2">Period of the Day</th>
-                                    </tr>
-                                    <!-- Sunday -->
-                                    <tr>
-                                        <td>Sunday</td>
-                                        <td>
-                                            <a href="{{ route('sun-morning') }}" class="btn btn-sm my-1">Morning</a>
-                                            <a href="{{ route('sun-afternoon') }}" class="btn btn-sm my-1">Afternoon</a>
-                                            <a href="{{ route('sun-night') }}" class="btn btn-sm my-1">Night</a>
-                                            <a href="{{ route('sun-apriori') }}" class="btn btn-sm my-1">Forecast</a>
-                                        </td>
-                                    </tr>
-                                    <!-- Monday -->
-                                    <tr>
-                                        <td>Monday</td>
-                                        <td>
-                                            <a href="{{ route('mon-morning') }}" class="btn btn-sm my-1">Morning</a>
-                                            <a href="{{ route('mon-afternoon') }}" class="btn btn-sm my-1">Afternoon</a>
-                                            <a href="{{ route('mon-night') }}" class="btn btn-sm my-1">Night</a>
-                                        </td>
-                                    </tr>
-                                    <!-- Tuesday -->
-                                    <tr>
-                                        <td>Tuesday</td>
-                                        <td>
-                                            <a href="{{ route('tues-morning') }}" class="btn btn-sm my-1">Morning</a>
-                                            <a href="{{ route('tues-afternoon') }}" class="btn btn-sm my-1">Afternoon</a>
-                                            <a href="{{ route('tues-night') }}" class="btn btn-sm my-1">Night</a>
-                                        </td>
-                                    </tr>
-                                    <!-- Wednesday -->
-                                    <tr>
-                                        <td>Wednesday</td>
-                                        <td>
-                                            <a href="{{ route('wed-morning') }}" class="btn btn-sm my-1">Morning</a>
-                                            <a href="{{ route('wed-afternoon') }}" class="btn btn-sm my-1">Afternoon</a>
-                                            <a href="{{ route('wed-night') }}" class="btn btn-sm my-1">Night</a>
-                                        </td>
-                                    </tr>
-                                    <!-- Thursday -->
-                                    <tr>
-                                        <td>Thursday</td>
-                                        <td>
-                                            <a href="{{ route('thurs-morning') }}" class="btn btn-sm my-1">Morning</a>
-                                            <a href="{{ route('thurs-afternoon') }}" class="btn btn-sm my-1">Afternoon</a>
-                                            <a href="{{ route('thurs-night') }}" class="btn btn-sm my-1">Night</a>
-                                            <a href="#" class="btn btn-sm my-1">Forecast</a>
-                                        </td>
-                                    </tr>
-                                    <!-- Friday -->
-                                    <tr>
-                                        <td>Friday</td>
-                                        <td>
-                                            <a href="{{ route('fri-morning') }}" class="btn btn-sm my-1">Morning</a>
-                                            <a href="{{ route('fri-afternoon') }}" class="btn btn-sm my-1">Afternoon</a>
-                                            <a href="{{ route('fri-night') }}" class="btn btn-sm my-1">Night</a>
-                                        </td>
-                                    </tr>
-                                </table>
+                                <div class="table-responsive">
+                                    <table class="table table-bordered">
+                                        <tr>
+                                            <th class="col-2">Day of the Week</th>
+                                            <th class="col-2">Period of the Day</th>
+                                            <th class="col-2"></th>
+                                        </tr>
+                                        <!-- Sunday -->
+                                        <tr>
+                                            <td>Sunday</td>
+                                            <td>
+                                                <a href="{{ route('sun-morning') }}" class="btn btn-sm my-1">Morning</a>
+                                                <a href="{{ route('sun-afternoon') }}"
+                                                    class="btn btn-sm my-1">Afternoon</a>
+                                                <a href="{{ route('sun-night') }}" class="btn btn-sm my-1">Night</a>
+                                            </td>
+                                            <td> <a href="{{ route('sun-apriori') }}"
+                                                    class="btn btn-sm my-1">Forecast</a></td>
+                                        </tr>
+                                        <!-- Monday -->
+                                        <tr>
+                                            <td>Monday</td>
+                                            <td>
+                                                <a href="{{ route('mon-morning') }}" class="btn btn-sm my-1">Morning</a>
+                                                <a href="{{ route('mon-afternoon') }}"
+                                                    class="btn btn-sm my-1">Afternoon</a>
+                                                <a href="{{ route('mon-night') }}" class="btn btn-sm my-1">Night</a>
+                                            </td>
+                                            <td> <a href="{{ route('mon-apriori') }}"
+                                                    class="btn btn-sm my-1">Forecast</a></td>
+                                        </tr>
+                                        <!-- Tuesday -->
+                                        <tr>
+                                            <td>Tuesday</td>
+                                            <td>
+                                                <a href="{{ route('tues-morning') }}"
+                                                    class="btn btn-sm my-1">Morning</a>
+                                                <a href="{{ route('tues-afternoon') }}"
+                                                    class="btn btn-sm my-1">Afternoon</a>
+                                                <a href="{{ route('tues-night') }}" class="btn btn-sm my-1">Night</a>
+                                            </td>
+                                            <td> <a href="{{ route('tues-apriori') }}"
+                                                    class="btn btn-sm my-1">Forecast</a></td>
+                                        </tr>
+                                        <!-- Wednesday -->
+                                        <tr>
+                                            <td>Wednesday</td>
+                                            <td>
+                                                <a href="{{ route('wed-morning') }}" class="btn btn-sm my-1">Morning</a>
+                                                <a href="{{ route('wed-afternoon') }}"
+                                                    class="btn btn-sm my-1">Afternoon</a>
+                                                <a href="{{ route('wed-night') }}" class="btn btn-sm my-1">Night</a>
+                                            </td>
+                                            <td> <a href="{{ route('wed-apriori') }}"
+                                                    class="btn btn-sm my-1">Forecast</a></td>
+                                        </tr>
+                                        <!-- Thursday -->
+                                        <tr>
+                                            <td>Thursday</td>
+                                            <td>
+                                                <a href="{{ route('thurs-morning') }}"
+                                                    class="btn btn-sm my-1">Morning</a>
+                                                <a href="{{ route('thurs-afternoon') }}"
+                                                    class="btn btn-sm my-1">Afternoon</a>
+                                                <a href="{{ route('thurs-night') }}" class="btn btn-sm my-1">Night</a>
+                                            </td>
+                                            <td> <a href="{{ route('thurs-apriori') }}"
+                                                    class="btn btn-sm my-1">Forecast</a></td>
+                                        </tr>
+                                        <!-- Friday -->
+                                        <tr>
+                                            <td>Friday</td>
+                                            <td>
+                                                <a href="{{ route('fri-morning') }}" class="btn btn-sm my-1">Morning</a>
+                                                <a href="{{ route('fri-afternoon') }}"
+                                                    class="btn btn-sm my-1">Afternoon</a>
+                                                <a href="{{ route('fri-night') }}" class="btn btn-sm my-1">Night</a>
+                                            </td>
+                                            <td> <a href="{{ route('fri-apriori') }}"
+                                                    class="btn btn-sm my-1">Forecast</a></td>
+                                        </tr>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                         <!-- Pagination placeholder - Firebase doesn't provide built-in pagination -->
